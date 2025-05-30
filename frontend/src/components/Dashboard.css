@@ -1,0 +1,138 @@
+/* General Layout */
+.dashboard-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+  background: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+h2 {
+  text-align: center;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: #2b6777;
+  margin-top: 2rem;
+  border-bottom: 2px solid #2b6777;
+  padding-bottom: 0.5rem;
+}
+
+/* Form Inputs */
+input,
+select {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.4rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+  border-color: #52ab98;
+  outline: none;
+  box-shadow: 0 0 8px rgba(82, 171, 152, 0.4);
+}
+
+/* Buttons */
+button {
+  background-color: #2b6777;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+button:hover {
+  background-color: #52ab98;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* List Styling */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  background: #e8f0f2;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+li:hover {
+  transform: translateY(-3px);
+  background: #d0ece7;
+}
+
+/* Alerts and Messages */
+p {
+  color: #333;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+}
+
+/* Role-specific backgrounds */
+.admin-bg {
+  background: linear-gradient(135deg, #e3fdf5, #ffe6fa);
+}
+
+.owner-bg {
+  background: linear-gradient(135deg, #f6d365, #fda085);
+}
+
+.user-bg {
+  background: linear-gradient(135deg, #c1dfc4, #deecdd);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .dashboard-container {
+    padding: 1rem;
+  }
+
+  input,
+  select {
+    font-size: 0.95rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
